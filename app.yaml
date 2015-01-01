@@ -17,8 +17,10 @@ handlers:
 - url: /img/
   static_dir: static/img
 
-- url: /.*
+- url: /USEMELATER.*
   script: py/first.py
 
-error_handlers:
-- file: static/404.html
+- url: /.*
+  static_files: static/index.html
+  upload: static/index.html
+
