@@ -19,7 +19,7 @@ handlers:
   static_dir: static/img
 
 - url: /USEMELATER.*
-  script: py/first.py
+  script: first.app
 
 - url: /.*
   static_files: static/index.html
