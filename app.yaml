@@ -4,5 +4,21 @@ runtime: python
 api_version: 1
 
 handlers:
+- url: /(.*)\.html$
+  static_files: static/\1.html
+  upload: static/.*\.html$
+
+- url: /css/
+  static_dir: static/css
+
+- url: /js/
+  static_dir: static/js
+
+- url: /img/
+  static_dir: static/img
+
 - url: /.*
-  script: first.py
+  script: py/first.py
+
+error_handlers:
+- file: static/404.html
